@@ -1,0 +1,86 @@
+<div style="color:#0f172a;font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;">
+    <div style="align-items:center;display:flex;gap:10px;margin-bottom:10px;">
+        <span style="background-color:#F3E8FF;color:#6D28D9;font-size:12px;"><span style="border-radius:999px;letter-spacing:.4px;padding:6px 10px;text-transform:uppercase;"><strong>{expression/expr4} </strong></span></span><span style="font-size:18px;"><span style="line-height:1.2;"><strong>{PROP_DESCP}&nbsp;</strong></span></span>
+    </div>
+    <div style="color:#334155;font-size:14px;margin-bottom:14px;">
+        <strong>Zoning:</strong> <span>{ZONING}</span>
+    </div>
+    <div style="display:grid;gap:10px;grid-template-columns:repeat(2, minmax(0,1fr));margin-bottom:12px;">
+        <div style="border-radius:14px;border:1px solid #e2e8f0;padding:12px;">
+            <div style="color:#64748b;font-size:11px;letter-spacing:.4px;text-transform:uppercase;">
+                Acres
+            </div>
+            <div style="font-size:20px;margin-top:2px;">
+                <strong>{expression/expr1}</strong>
+            </div>
+        </div>
+        <div style="border-radius:14px;border:1px solid #e2e8f0;padding:12px;">
+            <div style="color:#64748b;font-size:11px;letter-spacing:.4px;text-transform:uppercase;">
+                Area (sq ft)
+            </div>
+            <div style="font-size:20px;margin-top:2px;">
+                <strong>{expression/expr2}</strong>
+            </div>
+        </div>
+        <div style="border-radius:14px;border:1px solid #e2e8f0;padding:12px;">
+            <div style="color:#64748b;font-size:11px;letter-spacing:.4px;text-transform:uppercase;">
+                APN
+            </div>
+            <div style="font-size:18px;margin-top:2px;">
+                <strong>{APN}</strong>
+            </div>
+            <div style="color:#94a3b8;font-size:11px;margin-top:2px;">
+                Check: {APN_CHECK}
+            </div>
+        </div>
+        <div style="border-radius:14px;border:1px solid #e2e8f0;padding:12px;">
+            <div style="color:#64748b;font-size:11px;letter-spacing:.4px;text-transform:uppercase;">
+                ObjectID
+            </div>
+            <div style="font-size:16px;margin-top:2px;">
+                <strong>{OBJECTID_1}</strong>
+            </div>
+            <div style="color:#94a3b8;font-size:11px;margin-top:2px;">
+                Parcel FID: {FID_Parcels_Public}
+            </div>
+        </div>
+    </div>
+    <div style="background-color:#f8fafc;border-radius:12px;border:1px dashed #cbd5e1;margin-bottom:12px;padding:12px;">
+        <div style="color:#64748b;font-size:12px;letter-spacing:.4px;margin-bottom:6px;text-transform:uppercase;">
+            Site Address
+        </div>
+        <div style="font-size:15px;margin-bottom:8px;">
+            <strong>{expression/expr3}</strong>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;">
+            <a style="background-color:#F5F3FF;border-radius:999px;border:1px solid #e2e8f0;color:#5B21B6;font-size:12px;padding:8px 12px;text-decoration:none;" href="{expression/expr5}" target="_blank"><strong>🗺️ Open in Google Maps&nbsp;</strong></a>
+        </div>
+    </div>
+    <div style="display:grid;gap:10px;grid-template-columns:repeat(2, minmax(0,1fr));">
+        <div style="color:#334155;font-size:12px;line-height:1.6;">
+            <div>
+                <span style="color:#64748b;">Zone Code:</span> <strong>{PROP_ZONE}</strong>
+            </div>
+            <div>
+                <span style="color:#64748b;">Form-Based:</span> <strong>{FORM_BASED}</strong>
+            </div>
+            <div>
+                <span style="color:#64748b;">Zoning District FID:</span> <strong>{FID_ZoningDistrict_REST}</strong>
+            </div>
+        </div>
+        <div style="color:#334155;font-size:12px;line-height:1.6;">
+            <div>
+                <span style="color:#64748b;">Shape Area:</span> <strong>{expression/expr9}</strong>
+            </div>
+            <div>
+                <span style="color:#64748b;">Shape Length:</span> <strong>{expression/expr10}</strong>
+            </div>
+            <div>
+                <span style="color:#64748b;">Geom Stats:</span> <strong>{expression/expr11}</strong>
+            </div>
+        </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;">
+        <span style="background-color:#EDE9FE;color:#5B21B6;font-size:11px;"><span style="border-radius:999px;padding:6px 10px;">{expression/expr4} </span></span><span style="background-color:#FEF3C7;color:#854d0e;font-size:11px;"><span style="border-radius:999px;padding:6px 10px;">{expression/expr12}&nbsp;</span></span>
+    </div>
+</div>
