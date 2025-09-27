@@ -1,0 +1,32 @@
+var s = Upper(Trim(
+  IIf(!IsEmpty($feature.PROP_DESCP), $feature.PROP_DESCP,
+     IIf(!IsEmpty($feature.ZONING),    $feature.ZONING, ''))
+));
+
+var useLabel =
+  When(
+    Find('MIX', s) >= 0, 'Mixed-Use',
+    Find('COMM', s) >= 0, 'Commercial',
+    Find('INDUSTR', s) >= 0, 'Industrial',
+    Find('OFFICE', s) >= 0, 'Office',
+    (Find('PUBLIC', s) >= 0) || (Find('CIVIC', s) >= 0), 'Public/Civic',
+    Find('MULTI', s) >= 0, 'Multi-Family',
+    (Find('SINGLE', s) >= 0) || (Find(' SF', s) >= 0), 'Single-Family',
+    Find('AGR', s) >= 0, 'Agriculture',
+    (Find('OPEN SPACE', s) >= 0) || (Find('PARK', s) >= 0), 'Open Space',
+    ''  // default
+  );
+
+var intensity =
+  When(
+    Find('ACTIVITY CENTER', s) >= 0, 'Activity Center',
+    Find('HIGH', s) >= 0, 'High Density',
+    (Find('MED', s) >= 0) || (Find('MID', s) >= 0), 'Medium Density',
+    Find('LOW', s) >= 0, 'Low Density',
+    Find('NEIGHBORHOOD', s) >= 0, 'Neighborhood',
+    ''  // default
+  );
+
+IIf(IsEmpty(useLabel) && IsEmpty(intensity), '',
+  IIf(IsEmpty(intensity), useLabel,
+    IIf(IsEmpty(useLabel), intensity, useLabel + ' • ' + intensity)))
