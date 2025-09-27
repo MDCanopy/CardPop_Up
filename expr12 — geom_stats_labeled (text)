@@ -1,0 +1,9 @@
+var a = '';
+var l = '';
+if (HasKey($feature,'Shape_STAr')) {
+  a = Text($feature.Shape_STAr, '#,###.######') + ' (layer units)';
+}
+if (HasKey($feature,'Shape_STLe')) {
+  l = Text($feature.Shape_STLe, '#,###.######') + ' (layer units)';
+}
+Trim(a + IIf(IsEmpty(a) || IsEmpty(l), '', ' / ') + l)
