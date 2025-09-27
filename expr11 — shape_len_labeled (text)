@@ -1,0 +1,2 @@
+var l_ft = LengthGeodetic(Geometry($feature), 'feet');
+Text(Round(l_ft, 2), '#,###.##') + ' ft'
