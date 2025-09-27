@@ -1,0 +1,4 @@
+var geom_area = Area($feature);
+var isFeet = geom_area > 10000;
+var acres = IIf(isFeet, geom_area / 43560, geom_area * 0.000247105);
+Text(Round(acres, 2), '#,###.##')
