@@ -1,0 +1,3 @@
+When(!IsEmpty($feature.PROP_ZONE), $feature.PROP_ZONE,
+     !IsEmpty($feature.ZONING), Split($feature.ZONING, ' ')[0],
+     '')
