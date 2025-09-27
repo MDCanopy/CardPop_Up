@@ -1,0 +1,3 @@
+var geom_area = Area($feature);
+var sqft = IIf(geom_area < 10000, geom_area * 10.7639, geom_area);
+Text(Round(sqft, 0), '#,###')
