@@ -1,0 +1,10 @@
+// Builds "334 S 18TH ST Apt X, RCHMD 94804-2635"
+var num = DefaultValue($feature.S_STR_NBR, '');
+var frac = IIf(IsEmpty($feature.S_FRAC), '', ' ' + $feature.S_FRAC);
+var name = DefaultValue($feature.S_STR_NM, '');
+var suf = DefaultValue($feature.S_STR_SUF, '');
+var apt = IIf(IsEmpty($feature.S_APT_NBR), '', ' Apt ' + $feature.S_APT_NBR);
+var city = DefaultValue($feature.S_CTY_ABBR, '');
+var zip = DefaultValue($feature.S_ZIP, '');
+var zip4 = IIf(IsEmpty($feature.S_ZIP_EXT), '', '-' + $feature.S_ZIP_EXT);
+Trim(num + frac + ' ' + name + ' ' + suf + apt + ', ' + city + ' ' + zip + zip4)
