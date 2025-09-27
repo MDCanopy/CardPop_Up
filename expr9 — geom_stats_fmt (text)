@@ -1,0 +1,3 @@
+var a = IIf(HasKey($feature,'Shape_STAr'), Text($feature.Shape_STAr, '#,###.######'), '');
+var l = IIf(HasKey($feature,'Shape_STLe'), Text($feature.Shape_STLe,  '#,###.######'), '');
+Trim(a + ' / ' + l)
